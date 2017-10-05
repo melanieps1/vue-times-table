@@ -10,12 +10,23 @@
 		
 		<h1>Vue Times Table</h1>
 
-		<p>Rows<input id="rows" type="text" v-model="rowNumber" placeholder="Input rows"></p>
-		<p>Columns<input id="columns" type="text" v-model="columnNumber" placeholder="Input columns"></p>
+		<div class="inputs">
+			<p>Rows<input id="rows" type="text" v-model.number="rowNumber"></p>
+			<p>Columns<input id="columns" type="text" v-model.number="columnNumber"></p>
+		</div>
 
 		<button v-on:click="displayTable()">Display a <strong>{{rowNumber}} x {{columnNumber}}</strong> times table!</button>
 
-		<table></table>
+		<table id="timesTable">
+			<tr>
+				<th><strong>X</strong></th>
+				<th v-for="column in columnNumber"><strong>{{ column }}</strong></th>
+			</tr>
+			<tr v-for="row in rowNumber">
+				<th><strong>{{ row }}</strong></th>
+					<td v-for="column in columnNumber">{{ row * column }}</td>
+			</tr>
+		</table>
 
 	</div>
 
