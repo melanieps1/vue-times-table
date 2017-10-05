@@ -1,0 +1,43 @@
+[v-cloak] {
+	display: none;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+input {
+	margin-left: 12px;
+	max-width: 100px;
+}
+
+button {
+	background-color: #2e61b2;
+	border: none;
+	border-radius: 2px;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 6px 12px;
+}
+
+button:hover {
+	background-color: #4479ce;
+}
+
+table {
+	border-collapse: collapse;	
+	margin: 40px auto;
+	text-align: center;
+}
+
+table, th, td {
+	border: 1px solid black;
+	font-weight: normal;
+}
+
+th, td {
+	height: 30px;
+	width: 60px;
+}

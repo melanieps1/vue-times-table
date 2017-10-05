@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Times Table</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="main" v-cloak>
+		
+		<h1>Vue Times Table</h1>
+
+		<p>Rows<input id="rows" type="text" v-model="rowNumber" placeholder="Input rows"></p>
+		<p>Columns<input id="columns" type="text" v-model="columnNumber" placeholder="Input columns"></p>
+
+		<button v-on:click="displayTable()">Display a <strong>{{rowNumber}} x {{columnNumber}}</strong> times table!</button>
+
+		<table></table>
+
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
